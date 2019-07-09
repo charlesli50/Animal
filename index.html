@@ -1,0 +1,260 @@
+<!-- Create 3 forms using bootstrap for Dogs, cats, and others. From what i understand, this is supposed to be a form for the police to fill out so when they find an animal they fill it out, they want it digitally now instead of on paper, so that is what this project is, moving stuff to digital! -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animal Form</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+</head>
+<body>
+
+
+<!-- lets just forget what happened above -->
+
+
+
+<div class = "container mt-5">
+	
+	<form>
+
+	<!-- dates and time -->
+	<div class="input-group input-group-lg mb-3">
+		<div class="input-group-prepend">
+    		<span class="input-group-text">Date:</span>
+		</div>
+		<input type="Date" class="form-control" name = "date">
+		<div class="input-group-prepend">
+    		<span class="input-group-text">Time:</span>
+		</div>
+		<input type="Time" class="form-control" name = "time">
+	</div>
+	<!-- Lost/Found and Animal Type -->
+	<div class = "input-group input-group-lg mb-3">
+		<div class="input-group-prepend">
+			<div class="input-group-text">
+				Lost
+				<input type="radio" name="lostfound" value = "Lost"class = " ml-2 form-check">
+			</div>
+			<div class="input-group-text">
+				Found
+				<input type="radio" name="lostfound" value = "Found" class = "ml-2 form-check">
+			</div>
+			<div class="input-group-text bg-dark border border-dark"><!-- the space inbetween --></div>
+		</div>
+		<div class = "input-group-prepend">
+			<div class="input-group-text">
+				Dog
+				<input type="radio" name="animal" value = "Dog" class = " ml-2 form-check">
+			</div>
+			<div class="input-group-text">
+				Cat
+				<input type="radio" name="animal" value = "Cat" class = " ml-2 form-check">
+			</div>
+			<div class="input-group-text">
+				Other
+				<input type="radio" name="animal" value = "Other" class = " ml-2 form-check">
+			</div>
+		</div>
+		<input type="text" name="other_animal" class = "form-control" placeholder="Other">
+	</div>
+
+	<!-- Male/Female and Name -->
+
+	<div class="input-group input-group-lg mb-3">
+		<div class="input-group-prepend">
+			<div class="input-group-text">
+				Male
+				<input type="radio" name="gender" value = "male" class = "form-check ml-2">
+			</div>
+			<div class="input-group-text">
+				Female
+				<input type="radio" name="gender" value = "Female" class = "form-check ml-2">
+			</div>
+			<div class="input-group-text bg-dark border border-dark"><!-- another blank space --></div>
+		</div>
+		<div class = "input-group-prepend">
+
+			<div class="input-group-text">
+				Name:
+			</div>
+		</div>
+		<input type="text" name="name" class = "form-control" placeholder="Name">
+	</div>
+
+	<!-- spayed/neutered/unknown and chip(y/n/unkown) and fur(long/short)-->
+
+	<div class = "input-group input-group-lg mb-3" id = "line3">
+		<div class="input-group-prepend">
+			<div class="input-group-text">
+				Spayed
+				<input type="radio" name="spayed" value = "spayed" class = "form-check ml-2">
+			</div>
+			<div class="input-group-text">
+				Neutered
+				<input type="radio" name="spayed" value = "neutered" class = "form-check ml-2">
+			</div>
+			<div class="input-group-text">
+				Unknown
+				<input type="radio" name="spayed" value = "unknown" class = "form-check ml-2">
+			</div>
+			<div class="input-group-text bg-dark border border-dark"></div>
+		</div>
+		<div class = "input-group-prepend">
+
+
+			<div class="input-group-text">Chip:</div>
+			<div class="input-group-text">
+				Yes
+				<input type="radio" name="chip" value = "yes" class = "form-check ml-2">
+			</div>			
+			<div class="input-group-text">
+				No
+				<input type="radio" name="chip" value = "no" class = "form-check ml-2">
+			</div>
+			<div class="input-group-text">
+				Unknown
+				<input type="radio" name="chip" value = "unknown" class = "form-check ml-2">
+			</div>
+			<div class="input-group-text bg-dark border border-dark"></div>
+		</div>
+		<div class = "input-group-prepend">
+			<div class = "input-group-text">Fur:</div>
+			<div class="input-group-text">
+				Short
+				<input type="radio" name="fur" value = "short" class = "form-check ml-2">
+			</div>
+			<div class="input-group-text rounded">
+				Long
+				<input type="radio" name="fur" value = "long" class = "form-check ml-2">
+			</div>
+		</div>
+	</div>
+	<!-- liscensed, collar, tags, color -->
+	<div class="input-group input-group-lg mb-3">
+		<div class="input-group-prepend">
+			<div class="input-group-text">Licensed:</div>
+			<div class="input-group-text">
+				Yes
+				<input type="radio" name="licensed" value = "yes" class = "form-check ml-2">
+			</div>			
+			<div class="input-group-text">
+				No
+				<input type="radio" name="licensed" value = "no" class = "form-check ml-2">
+			</div>
+			<div class="input-group-text bg-dark border border-dark"></div>
+		</div>
+
+		<div class = "input-group-prepend">
+			<div class="input-group-text">Collar:</div>
+			<div class="input-group-text">
+				Yes
+				<input type="radio" name="Collar" value = "yes" class = "form-check ml-2">
+			</div>			
+			<div class="input-group-text">
+				No
+				<input type="radio" name="Collar" value = "no" class = "form-check ml-2">
+			</div>
+			<div class="input-group-text bg-dark border border-dark"></div>
+		</div>
+
+		<div class = "input-group-prepend">
+			<div class="input-group-text">Tags:</div>
+			<div class="input-group-text">
+				Yes
+				<input type="radio" name="tags" value = "yes" class = "form-check ml-2">
+			</div>			
+			<div class="input-group-text">
+				No
+				<input type="radio" name="tags" value = "no" class = "form-check ml-2">
+			</div>
+			<div class="input-group-text bg-dark border border-dark"></div>
+		</div>
+		<div class = "input-group-prepend">
+			<div class="input-group-text">Color:</div>
+
+		</div>
+		<input type="text" name="color" class = "form-control" placeholder="Color">
+	</div>
+
+	<!-- animal dropped off at rotherwood(y/n/other)-->
+
+	<!-- need to figure out how to format this question for mobile currently it just cuts off, which is bad!!! rn the fix is keeping it set to normal instead of large but that isnt sustainable-->
+
+	<div class="input-group mb-3">
+		<div class="input-group-prepend">
+			<div class="input-group-text h5	">Animal Dropped off at Rotherwood: </div>
+			<div class="input-group-text">
+				Yes
+				<input type="radio" name="dropped" value = "yes" class = "form-check ml-2">
+			</div>
+			<div class="input-group-text">
+				No
+				<input type="radio" name="dropped" value = "no" class = "form-check ml-2">
+			</div>
+			<div class="input-group-text">
+				Other
+				<input type="radio" name="dropped" value = "other" class = "form-check ml-2">
+			</div>
+		</div>
+		<input type="text" name="other_dropped" class = "form-control" placeholder="Other">
+	</div>
+
+	<div class="input-group input-group-lg mb-3">
+		<div class="input-group-prepend">
+			<div class="input-group-text"> Dropped off by: </div>
+			<div class="input-group-text">
+				Aco
+				<input type="radio" name="droppedby" value = "Aco" class = "form-check ml-2">
+			</div>
+			<div class="input-group-text">
+				Finder
+				<input type="radio" name="droppedby" value = "Finder" class = "form-check ml-2">
+			</div>
+			<div class="input-group-text">
+				Other
+				<input type="radio" name="droppedby" value = "other" class = "form-check ml-2">
+			</div>
+		</div>
+		<input type="text" name="other_dropped" class = "form-control" placeholder="Other">
+	</div>
+
+	<h4>Owners or Finders Information</h4>
+
+	<div class="input-group input-group-lg mb-3">
+		<div class="input-group-prepend">
+			<div class="input-group-text">Name</div>
+		</div>
+		<input type="text" name="owners_name"  class = "form-control" placeholder="Name">
+		<div class="input-group-prepend">
+			<div class="input-group-text">Address</div>
+		</div>
+		<input type="text" name="address"  class = "form-control" placeholder="Address">
+	</div>	
+
+	<div class="input-group input-group-lg mb-3">
+		<div class="input-group-prepend">
+			<div class = "input-group-text">Phone:</div>
+		</div>
+		<input type="tel" name="phone" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}" class = "form-control" placeholder="123-456-7890">
+	</div>	
+
+	<div class="input-group input-group-lg mb-3">
+		<div class="input-group-prepend">
+			<div class = "input-group-text">Area Animal was last seen:</div>
+		</div>
+		<input type="text" name="area" class = "form-control">
+	</div>
+
+
+
+
+	</form>
+
+</div>
+
+</body>
+</html>

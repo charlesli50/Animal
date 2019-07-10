@@ -35,7 +35,6 @@ $('#cat_animal').click(function(){
 	}
 })
 // dropped at rotherwood
-// #other_dro   #other_dropped   #other_yes    #other_no  #other_dropped_text
 
 $('#other_dro').click(function(){
 	if ($("#other_dropped").is(":checked")){
@@ -58,8 +57,8 @@ $('#other_no').click(function(){
 		$("#other_dropped_text").prop("required", false)
 	}
 })
-// dropped off by
-// #other_b   #other_by   #aco    #finder  #other_by_text
+// dropped off by who
+
 $('#other_b').click(function(){
 	if ($("#other_by").is(":checked")){
 		console.log("its a checkeded")

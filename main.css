@@ -1,0 +1,11 @@
+.question {
+	border-left: 5px solid black;
+	border-radius: 3px;
+}
+* {
+  border-radius: 0 !important;
+}
+:disabled{
+	background-color: #ccc !important;
+	border-color: #ccc;
+}

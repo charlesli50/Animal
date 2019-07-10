@@ -1,183 +1,215 @@
 <!-- Create 3 forms using bootstrap for Dogs, cats, and others. From what i understand, this is supposed to be a form for the police to fill out so when they find an animal they fill it out, they want it digitally now instead of on paper, so that is what this project is, moving stuff to digital! -->
 
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Animal Form</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="main.css">
+
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
 
 </head>
 <body>
 
 
-<!-- lets just forget what happened above -->
+<div class = "container mt-3 mb-3">
 
-
-
-<div class = "container mt-5">
+	<p class = "display-3 text-center">Animal Form 	</p>
 	
-	<form>
+	<form name = "myform" onsubmit="display();" >
 
 	<!-- dates and time -->
 	<div class="input-group input-group-lg mb-3">
-		<div class="input-group-prepend">
+		<div class="input-group-prepend question">
     		<span class="input-group-text">Date:</span>
 		</div>
-		<input type="Date" class="form-control" name = "date">
+		<input type="Date" class="form-control" name = "date" required="true">
 		<div class="input-group-prepend">
-    		<span class="input-group-text">Time:</span>
+    		<span class="input-group-text question">Time:</span>
 		</div>
-		<input type="Time" class="form-control" name = "time">
+		<input type="Time" class="form-control" name = "time" required="true">
 	</div>
 	<!-- Lost/Found and Animal Type -->
 	<div class = "input-group input-group-lg mb-3">
 		<div class="input-group-prepend">
-			<div class="input-group-text">
+			<div class="input-group-text question">
 				Lost
-				<input type="radio" name="lostfound" value = "Lost"class = " ml-2 form-check">
+				<input type="radio" name="lostfound" value = "Lost"class = " ml-2 form-check" required="true">
 			</div>
 			<div class="input-group-text">
 				Found
-				<input type="radio" name="lostfound" value = "Found" class = "ml-2 form-check">
+				<input type="radio" name="lostfound" value = "Found" class = "ml-2 form-check" required="true">
 			</div>
-			<div class="input-group-text bg-dark border border-dark"><!-- the space inbetween --></div>
 		</div>
 		<div class = "input-group-prepend">
-			<div class="input-group-text">
+			<div class="input-group-text question">
 				Dog
-				<input type="radio" name="animal" value = "Dog" class = " ml-2 form-check">
+				<input type="radio" name="animal" value = "Dog" class = " ml-2 form-check" id = "dog_animal" required="true">
 			</div>
 			<div class="input-group-text">
 				Cat
-				<input type="radio" name="animal" value = "Cat" class = " ml-2 form-check">
+				<input type="radio" name="animal" value = "Cat" class = " ml-2 form-check" id = "cat_animal" required="true">
 			</div>
-			<div class="input-group-text">
+			<div class="input-group-text" id = "other_ani">
 				Other
-				<input type="radio" name="animal" value = "Other" class = " ml-2 form-check">
+				<input type="radio" name="animal" value = "Other" class = " ml-2 form-check" id = "other_animal" required="true">
 			</div>
 		</div>
-		<input type="text" name="other_animal" class = "form-control" placeholder="Other">
+		<input type="text" name="other_animal" class = "form-control" placeholder="Other" id = "other_animal_text" disabled="">
 	</div>
 
 	<!-- Male/Female and Name -->
 
 	<div class="input-group input-group-lg mb-3">
 		<div class="input-group-prepend">
-			<div class="input-group-text">
+			<div class="input-group-text question">
 				Male
-				<input type="radio" name="gender" value = "male" class = "form-check ml-2">
+				<input type="radio" name="gender" value = "male" class = "form-check ml-2" required="true">
 			</div>
 			<div class="input-group-text">
 				Female
-				<input type="radio" name="gender" value = "Female" class = "form-check ml-2">
+				<input type="radio" name="gender" value = "Female" class = "form-check ml-2" required="true">
 			</div>
-			<div class="input-group-text bg-dark border border-dark"><!-- another blank space --></div>
 		</div>
 		<div class = "input-group-prepend">
 
-			<div class="input-group-text">
+			<div class="input-group-text question">
 				Name:
 			</div>
 		</div>
-		<input type="text" name="name" class = "form-control" placeholder="Name">
+		<input type="text" name="name" class = "form-control" placeholder="Name" required="true">
+	</div>
+
+	<div class="input-group input-group-lg mb-3">
+		<div class="input-group-prepend">
+			<div class="input-group-text question">
+				Animal Struck by M/V:
+			</div>
+			<div class="input-group-text">
+				Yes
+				<input type="radio" name="struck" value = "yes" class = "form-check ml-1" required="true">
+			</div>
+			<div class="input-group-text">
+				No
+				<input type="radio" name="struck" value = "no" class = "form-check ml-1" required="true">
+			</div>
+		</div>
+		<div class="input-group-prepend">
+			<div class="input-group-text question">
+				Animal Deceased:
+			</div>
+			<div class="input-group-text">
+				Yes
+				<input type="radio" name="deceased" value = "yes" class = "form-check ml-1" required="true">
+			</div>
+			<div class="input-group-text">
+				No
+				<input type="radio" name="deceased" value = "no" class = "form-check ml-1" required="true">
+			</div>
+		</div>
+		<div class="input-group-prepend">
+			<div class="input-group-text question">
+				Picked up by DPW:
+			</div>
+			<div class="input-group-text">
+				Yes
+				<input type="radio" name="picked" value = "yes" class = "form-check ml-1" required="true">
+			</div>
+			<div class="input-group-text">
+				No
+				<input type="radio" name="picked" value = "no" class = "form-check ml-1" required="true">
+			</div>
+		</div>
 	</div>
 
 	<!-- spayed/neutered/unknown and chip(y/n/unkown) and fur(long/short)-->
 
 	<div class = "input-group input-group-lg mb-3" id = "line3">
 		<div class="input-group-prepend">
-			<div class="input-group-text">
+			<div class="input-group-text question">
 				Spayed
-				<input type="radio" name="spayed" value = "spayed" class = "form-check ml-2">
+				<input type="radio" name="spayed" value = "spayed" class = "form-check ml-2" required="true">
 			</div>
 			<div class="input-group-text">
 				Neutered
-				<input type="radio" name="spayed" value = "neutered" class = "form-check ml-2">
+				<input type="radio" name="spayed" value = "neutered" class = "form-check ml-2" required="true">
 			</div>
 			<div class="input-group-text">
 				Unknown
-				<input type="radio" name="spayed" value = "unknown" class = "form-check ml-2">
+				<input type="radio" name="spayed" value = "unknown" class = "form-check ml-2" required="true">
 			</div>
-			<div class="input-group-text bg-dark border border-dark"></div>
 		</div>
 		<div class = "input-group-prepend">
-
-
-			<div class="input-group-text">Chip:</div>
+			<div class="input-group-text question">Chip:</div>
 			<div class="input-group-text">
 				Yes
-				<input type="radio" name="chip" value = "yes" class = "form-check ml-2">
+				<input type="radio" name="chip" value = "yes" class = "form-check ml-2" required="true">
 			</div>			
 			<div class="input-group-text">
 				No
-				<input type="radio" name="chip" value = "no" class = "form-check ml-2">
+				<input type="radio" name="chip" value = "no" class = "form-check ml-2" required="true">
 			</div>
 			<div class="input-group-text">
 				Unknown
-				<input type="radio" name="chip" value = "unknown" class = "form-check ml-2">
+				<input type="radio" name="chip" value = "unknown" class = "form-check ml-2" required="true">
 			</div>
-			<div class="input-group-text bg-dark border border-dark"></div>
 		</div>
 		<div class = "input-group-prepend">
-			<div class = "input-group-text">Fur:</div>
+			<div class = "input-group-text question">Fur:</div>
 			<div class="input-group-text">
 				Short
-				<input type="radio" name="fur" value = "short" class = "form-check ml-2">
+				<input type="radio" name="fur" value = "short" class = "form-check ml-1" required="true">
 			</div>
 			<div class="input-group-text rounded">
 				Long
-				<input type="radio" name="fur" value = "long" class = "form-check ml-2">
+				<input type="radio" name="fur" value = "long" class = "form-check ml-2" required="true">
 			</div>
 		</div>
 	</div>
 	<!-- liscensed, collar, tags, color -->
 	<div class="input-group input-group-lg mb-3">
 		<div class="input-group-prepend">
-			<div class="input-group-text">Licensed:</div>
+			<!-- liscensed -->
+			<div class="input-group-text question">Licensed:</div>
 			<div class="input-group-text">
 				Yes
-				<input type="radio" name="licensed" value = "yes" class = "form-check ml-2">
+				<input type="radio" name="licensed" value = "yes" class = "form-check ml-2" required="true">
 			</div>			
 			<div class="input-group-text">
 				No
-				<input type="radio" name="licensed" value = "no" class = "form-check ml-2">
+				<input type="radio" name="licensed" value = "no" class = "form-check ml-2" required="true">
 			</div>
-			<div class="input-group-text bg-dark border border-dark"></div>
 		</div>
-
+		<!-- collar -->
 		<div class = "input-group-prepend">
-			<div class="input-group-text">Collar:</div>
+			<div class="input-group-text question">Collar:</div>
 			<div class="input-group-text">
 				Yes
-				<input type="radio" name="Collar" value = "yes" class = "form-check ml-2">
+				<input type="radio" name="Collar" value = "yes" class = "form-check ml-2" required="true">
 			</div>			
 			<div class="input-group-text">
 				No
-				<input type="radio" name="Collar" value = "no" class = "form-check ml-2">
+				<input type="radio" name="Collar" value = "no" class = "form-check ml-2" required="true">
 			</div>
-			<div class="input-group-text bg-dark border border-dark"></div>
 		</div>
-
+		<!-- Tags and Color -->
 		<div class = "input-group-prepend">
-			<div class="input-group-text">Tags:</div>
+			<div class="input-group-text question">Tags:</div>
 			<div class="input-group-text">
 				Yes
-				<input type="radio" name="tags" value = "yes" class = "form-check ml-2">
+				<input type="radio" name="tags" value = "yes" class = "form-check ml-2" required="true">
 			</div>			
 			<div class="input-group-text">
 				No
-				<input type="radio" name="tags" value = "no" class = "form-check ml-2">
+				<input type="radio" name="tags" value = "no" class = "form-check ml-2" required="true">
 			</div>
-			<div class="input-group-text bg-dark border border-dark"></div>
 		</div>
 		<div class = "input-group-prepend">
-			<div class="input-group-text">Color:</div>
+			<div class="input-group-text question">Color:</div>
 
 		</div>
-		<input type="text" name="color" class = "form-control" placeholder="Color">
+		<input type="text" name="color" class = "form-control" placeholder="Color" required="true">
 	</div>
 
 	<!-- animal dropped off at rotherwood(y/n/other)-->
@@ -186,75 +218,125 @@
 
 	<div class="input-group mb-3">
 		<div class="input-group-prepend">
-			<div class="input-group-text h5	">Animal Dropped off at Rotherwood: </div>
+			<div class="input-group-text question">Animal Dropped off at Rotherwood:</div>
 			<div class="input-group-text">
 				Yes
-				<input type="radio" name="dropped" value = "yes" class = "form-check ml-2">
+				<input type="radio" name="dropped" value = "yes" class = "form-check ml-2" id = "other_yes" required="true">
 			</div>
 			<div class="input-group-text">
 				No
-				<input type="radio" name="dropped" value = "no" class = "form-check ml-2">
+				<input type="radio" name="dropped" value = "no" class = "form-check ml-2" id = "other_no" required="true">
 			</div>
-			<div class="input-group-text">
+			<div class="input-group-text" id = "other_dro">
 				Other
-				<input type="radio" name="dropped" value = "other" class = "form-check ml-2">
+				<input type="radio" name="dropped" value = "other" class = "form-check ml-2" id = "other_dropped" required="true">
 			</div>
 		</div>
-		<input type="text" name="other_dropped" class = "form-control" placeholder="Other">
+		<input type="text" name="other_dropped" class = "form-control" placeholder="Other" disabled="true" id = "other_dropped_text">
 	</div>
+	<!-- dropped off by "Aco", finder or Other -->
+
+
 
 	<div class="input-group input-group-lg mb-3">
 		<div class="input-group-prepend">
-			<div class="input-group-text"> Dropped off by: </div>
+			<div class="input-group-text question"> Dropped off by: </div>
 			<div class="input-group-text">
 				Aco
-				<input type="radio" name="droppedby" value = "Aco" class = "form-check ml-2">
+				<input type="radio" name="droppedby" value = "Aco" class = "form-check ml-2" id = "aco" required="true">
 			</div>
 			<div class="input-group-text">
 				Finder
-				<input type="radio" name="droppedby" value = "Finder" class = "form-check ml-2">
+				<input type="radio" name="droppedby" value = "Finder" class = "form-check ml-2" id = "finder" required="true">
 			</div>
-			<div class="input-group-text">
+			<div class="input-group-text" id = "other_b">
 				Other
-				<input type="radio" name="droppedby" value = "other" class = "form-check ml-2">
+				<input type="radio" name="droppedby" value = "other" class = "form-check ml-2" id = "other_by" required="true">
 			</div>
 		</div>
-		<input type="text" name="other_dropped" class = "form-control" placeholder="Other">
-	</div>
-
-	<h4>Owners or Finders Information</h4>
-
-	<div class="input-group input-group-lg mb-3">
-		<div class="input-group-prepend">
-			<div class="input-group-text">Name</div>
-		</div>
-		<input type="text" name="owners_name"  class = "form-control" placeholder="Name">
-		<div class="input-group-prepend">
-			<div class="input-group-text">Address</div>
-		</div>
-		<input type="text" name="address"  class = "form-control" placeholder="Address">
-	</div>	
-
-	<div class="input-group input-group-lg mb-3">
-		<div class="input-group-prepend">
-			<div class = "input-group-text">Phone:</div>
-		</div>
-		<input type="tel" name="phone" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}" class = "form-control" placeholder="123-456-7890">
-	</div>	
-
-	<div class="input-group input-group-lg mb-3">
-		<div class="input-group-prepend">
-			<div class = "input-group-text">Area Animal was last seen:</div>
-		</div>
-		<input type="text" name="area" class = "form-control">
+		<input type="text" name="other_droppedby" class = "form-control" placeholder="Other" disabled="true" id = "other_by_text">
 	</div>
 
 
 
+	<hr>
+	<h4 class = "text-center">Owners or Finders Information</h4>
+	<!-- owner / finders name and address -->
+	<div class="input-group input-group-lg mb-3">
+		<div class="input-group-prepend">
+			<div class="input-group-text question">Name</div>
+		</div>
+		<input type="text" name="owners_name"  class = "form-control" placeholder="Name" required="true">
+		<div class="input-group-prepend">
+			<div class="input-group-text question">Address</div>
+		</div>
+		<input type="text" name="address"  class = "form-control" placeholder="Address" required="true">
+	</div>	
+	<!-- owner/finders phone number -->
+	<div class="input-group input-group-lg mb-3">
+		<div class="input-group-prepend">
+			<div class = "input-group-text question">Phone:</div>
+		</div>
+		<input type="tel" name="phone" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}" class = "form-control" placeholder="123-456-7890" required="true">
+	</div>	
+	<!-- area animal was last seen -->
+	<div class="input-group input-group-lg mb-3">
+		<div class="input-group-prepend">
+			<div class = "input-group-text question">Area Animal was last seen:</div>
+		</div>
+		<input type="text" name="area" class = "form-control" placeholder="Location" required="true">
+	</div>
+	<!-- dispatcher / aco -->
+	<div class="input-group input-group-lg mb-3">
+		<div class="input-group-prepend">
+			<div class="input-group-text question" >Dispatcher / Aco:</div>
+		</div>
+		<input type="text" name="dispatcher" class = "form-control" required="true">
+	</div>
+	<!-- Animal returned (Y/N) and date -->
+	<div class="input-group input-group-lg mb-3">
+		<div class="input-group-prepend">
+			<div class="input-group-text question">Animal Returned to Owner:</div>
+			<div class="input-group-text">
+				Yes
+				<input type="radio" name="returned" value = "yes" class = "form-check ml-1" required="true">
+			</div>			
+			<div class="input-group-text">
+				No
+				<input type="radio" name="returned" value = "No" class = "form-check ml-1" required="true">
+			</div>
+		</div>
+		<div class="input-group-prepend">
+			<div class="input-group-text question">Date:</div>
+		</div>
+		<input type="date" name="date" class = "form-control" required="true">
+	</div>
+	<!-- Other Info -->
+	<div class="input-group input-group-lg mb-3">
+		<div class="input-group-prepend">
+			<div class="input-group-text question" >Other Info:</div>
+		</div>
+		<textarea class = "form-control"></textarea>
+	</div>
+
+	<!-- the alimighty submit button -->
+	<input class = "btn btn-success btn-lg w-100" type = "submit" required="true"> 
 
 	</form>
 
+
+	<div id = "result" class = "mt-5 mb-5"></div>
+
 </div>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src = "main.js"></script>
+
 
 </body>
 </html>
+
+
+<!-- next up is validation and stuff -->

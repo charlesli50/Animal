@@ -13,7 +13,7 @@
 <body>
 
 
-<div class = "container mt-3 mb-3">
+<div class = "container mt-3 mt-3">
 
 	<p class = "display-3 text-center">Animal Form</p>
 	<div class = "container-fluid">
@@ -24,12 +24,12 @@
 		</div>
 	</div>
 	
-	<form name = "myform" onsubmit="display();" id = "dog_form">
+	<form name = "myform" onsubmit="display()" id = "dog_form">
 		<hr>
 		<h2 class = "text-center h1"> Dog Form </h2>
 
 	<!-- dates and time  and lost/found -->
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg">
 		<div class="input-group-prepend question">
     		<span class="input-group-text">Date:</span>
 		</div>
@@ -41,19 +41,18 @@
 		<div class="input-group-prepend">
 			<div class="input-group-text question">
 				Lost
-				<input type="radio" name="lostfound" value = "Lost"class = " ml-2 form-check" required="true">
+				<input type="radio" name="lostfound" value = "Lost"class = " ml-2 form-check" required>
 			</div>
 			<div class="input-group-text">
 				Found
-				<input type="radio" name="lostfound" value = "Found" class = "ml-2 form-check" required="true">
+				<input type="radio" name="lostfound" value = "Found" class = "ml-2 form-check" required>
 			</div>
 		</div>
 	</div>
 
-
 	<!-- Male/Female and Name -->
 
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<div class="input-group-text question">
 				Male
@@ -73,7 +72,7 @@
 		<input type="text" name="name" class = "form-control" placeholder="Name" required="true">
 	</div>
 
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<div class="input-group-text question">
 				Animal Struck by M/V:
@@ -117,7 +116,7 @@
 
 	<!-- spayed/neutered/unknown and chip(y/n/unkown) and fur(long/short)-->
 
-	<div class = "input-group input-group-lg mb-3" id = "line3">
+	<div class = "input-group input-group-lg mt-3" id = "line3">
 		<div class="input-group-prepend">
 			<div class="input-group-text question">
 				Spayed
@@ -160,7 +159,7 @@
 		</div>
 	</div>
 	<!-- liscensed, collar, tags, color -->
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<!-- liscensed -->
 			<div class="input-group-text question">Licensed:</div>
@@ -208,7 +207,7 @@
 
 	<!-- need to figure out how to format this question for mobile currently it just cuts off, which is bad!!! rn the fix is keeping it set to normal instead of large but that isnt sustainable-->
 
-	<div class="input-group mb-3">
+	<div class="input-group mt-3">
 		<div class="input-group-prepend">
 			<div class="input-group-text question">Animal Dropped off at Rotherwood:</div>
 			<div class="input-group-text">
@@ -227,7 +226,7 @@
 		<input type="text" name="other_dropped" class = "form-control" placeholder="Other" disabled="true" id = "other_dropped_text">
 	</div>
 	<!-- dropped off by "Aco", finder or Other -->
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<div class="input-group-text question"> Dropped off by: </div>
 			<div class="input-group-text">
@@ -249,7 +248,7 @@
 	<hr>
 	<h4 class = "text-center">Owners or Finders Information</h4>
 	<!-- owner / finders name and address -->
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<div class="input-group-text question">Name</div>
 		</div>
@@ -260,28 +259,28 @@
 		<input type="text" name="address"  class = "form-control" placeholder="Address" required="true">
 	</div>	
 	<!-- owner/finders phone number -->
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<div class = "input-group-text question">Phone:</div>
 		</div>
 		<input type="tel" name="phone" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}" class = "form-control" placeholder="123-456-7890" required="true">
 	</div>	
 	<!-- area animal was last seen -->
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<div class = "input-group-text question">Area Animal was last seen:</div>
 		</div>
 		<input type="text" name="area" class = "form-control" placeholder="Location" required="true">
 	</div>
 	<!-- dispatcher / aco -->
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<div class="input-group-text question" >Dispatcher / Aco:</div>
 		</div>
 		<input type="text" name="dispatcher" class = "form-control" required="true">
 	</div>
 	<!-- Animal returned (Y/N) and date -->
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<div class="input-group-text question">Animal Returned to Owner:</div>
 			<div class="input-group-text">
@@ -299,7 +298,7 @@
 		<input type="date" name="date" class = "form-control" required="true">
 	</div>
 	<!-- Other Info -->
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<div class="input-group-text question" >Other Info:</div>
 		</div>
@@ -307,7 +306,7 @@
 	</div>
 
 	<!-- the alimighty submit button -->
-	<input class = "btn btn-success btn-lg w-100" type = "submit" required="true"> 
+	<input class = "btn btn-success btn-lg w-100 mt-3" type = "submit" required="true"> 
 
 	</form>
 
@@ -327,7 +326,7 @@
 		<h2 class = "text-center h1"> Cat Form </h2>
 
 	<!-- dates and time  and lost/found -->
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend question">
     		<span class="input-group-text">Date:</span>
 		</div>
@@ -351,7 +350,7 @@
 
 	<!-- Male/Female and Name -->
 
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<div class="input-group-text question">
 				Male
@@ -371,7 +370,7 @@
 		<input type="text" name="name" class = "form-control" placeholder="Name" required="true">
 	</div>
 
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<div class="input-group-text question">
 				Animal Struck by M/V:
@@ -415,7 +414,7 @@
 
 	<!-- spayed/neutered/unknown and chip(y/n/unkown) and fur(long/short)-->
 
-	<div class = "input-group input-group-lg mb-3" id = "line3">
+	<div class = "input-group input-group-lg mt-3" id = "line3">
 		<div class="input-group-prepend">
 			<div class="input-group-text question">
 				Spayed
@@ -458,7 +457,7 @@
 		</div>
 	</div>
 	<!-- liscensed, collar, tags, color -->
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<!-- liscensed -->
 			<div class="input-group-text question">Licensed:</div>
@@ -506,7 +505,7 @@
 
 	<!-- need to figure out how to format this question for mobile currently it just cuts off, which is bad!!! rn the fix is keeping it set to normal instead of large but that isnt sustainable-->
 
-	<div class="input-group mb-3">
+	<div class="input-group mt-3">
 		<div class="input-group-prepend">
 			<div class="input-group-text question">Animal Dropped off at Rotherwood:</div>
 			<div class="input-group-text">
@@ -525,7 +524,7 @@
 		<input type="text" name="other_dropped" class = "form-control" placeholder="Other" disabled="true" id = "other_dropped_text">
 	</div>
 	<!-- dropped off by "Aco", finder or Other -->
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<div class="input-group-text question"> Dropped off by: </div>
 			<div class="input-group-text">
@@ -547,7 +546,7 @@
 	<hr>
 	<h4 class = "text-center">Owners or Finders Information</h4>
 	<!-- owner / finders name and address -->
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<div class="input-group-text question">Name</div>
 		</div>
@@ -558,28 +557,28 @@
 		<input type="text" name="address"  class = "form-control" placeholder="Address" required="true">
 	</div>	
 	<!-- owner/finders phone number -->
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<div class = "input-group-text question">Phone:</div>
 		</div>
 		<input type="tel" name="phone" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}" class = "form-control" placeholder="123-456-7890" required="true">
 	</div>	
 	<!-- area animal was last seen -->
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<div class = "input-group-text question">Area Animal was last seen:</div>
 		</div>
 		<input type="text" name="area" class = "form-control" placeholder="Location" required="true">
 	</div>
 	<!-- dispatcher / aco -->
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<div class="input-group-text question" >Dispatcher / Aco:</div>
 		</div>
 		<input type="text" name="dispatcher" class = "form-control" required="true">
 	</div>
 	<!-- Animal returned (Y/N) and date -->
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<div class="input-group-text question">Animal Returned to Owner:</div>
 			<div class="input-group-text">
@@ -597,7 +596,7 @@
 		<input type="date" name="date" class = "form-control" required="true">
 	</div>
 	<!-- Other Info -->
-	<div class="input-group input-group-lg mb-3">
+	<div class="input-group input-group-lg mt-3">
 		<div class="input-group-prepend">
 			<div class="input-group-text question" >Other Info:</div>
 		</div>
@@ -605,7 +604,7 @@
 	</div>
 
 	<!-- the alimighty submit button -->
-	<input class = "btn btn-success btn-lg w-100" type = "submit" required="true"> 
+	<input class = "btn btn-success btn-lg w-100 mt-3" type = "submit" required="true"> 
 
 	</form>
 
@@ -621,7 +620,7 @@
 		<h2 class = "text-center h1"> Other Form </h2>
 
 		<!-- dates and time  and lost/found -->
-		<div class="input-group input-group-lg mb-3">
+		<div class="input-group input-group-lg mt-3">
 			<div class="input-group-prepend question">
 	    		<span class="input-group-text">Date:</span>
 			</div>
@@ -645,7 +644,7 @@
 
 		<!-- Male/Female and Name -->
 
-		<div class="input-group input-group-lg mb-3">
+		<div class="input-group input-group-lg mt-3">
 			<div class="input-group-prepend">
 				<div class="input-group-text question">
 					Male
@@ -665,7 +664,7 @@
 			<input type="text" name="name" class = "form-control" placeholder="Name" required="true">
 		</div>
 
-		<div class="input-group input-group-lg mb-3">
+		<div class="input-group input-group-lg mt-3">
 			<div class="input-group-prepend">
 				<div class="input-group-text question">
 					Animal Struck by M/V:
@@ -709,7 +708,7 @@
 
 		<!-- spayed/neutered/unknown and chip(y/n/unkown) and fur(long/short)-->
 
-		<div class = "input-group input-group-lg mb-3" id = "line3">
+		<div class = "input-group input-group-lg mt-3" id = "line3">
 			<div class="input-group-prepend">
 				<div class="input-group-text question">
 					Spayed
@@ -752,7 +751,7 @@
 			</div>
 		</div>
 		<!-- liscensed, collar, tags, color -->
-		<div class="input-group input-group-lg mb-3">
+		<div class="input-group input-group-lg mt-3">
 			<div class="input-group-prepend">
 				<!-- liscensed -->
 				<div class="input-group-text question">Licensed:</div>
@@ -800,7 +799,7 @@
 
 		<!-- need to figure out how to format this question for mobile currently it just cuts off, which is bad!!! rn the fix is keeping it set to normal instead of large but that isnt sustainable-->
 
-		<div class="input-group mb-3">
+		<div class="input-group mt-3">
 			<div class="input-group-prepend">
 				<div class="input-group-text question">Animal Dropped off at Rotherwood:</div>
 				<div class="input-group-text">
@@ -819,7 +818,7 @@
 			<input type="text" name="other_dropped" class = "form-control" placeholder="Other" disabled="true" id = "other_dropped_text">
 		</div>
 		<!-- dropped off by "Aco", finder or Other -->
-		<div class="input-group input-group-lg mb-3">
+		<div class="input-group input-group-lg mt-3">
 			<div class="input-group-prepend">
 				<div class="input-group-text question"> Dropped off by: </div>
 				<div class="input-group-text">
@@ -841,7 +840,7 @@
 		<hr>
 		<h4 class = "text-center">Owners or Finders Information</h4>
 		<!-- owner / finders name and address -->
-		<div class="input-group input-group-lg mb-3">
+		<div class="input-group input-group-lg mt-3">
 			<div class="input-group-prepend">
 				<div class="input-group-text question">Name</div>
 			</div>
@@ -852,28 +851,28 @@
 			<input type="text" name="address"  class = "form-control" placeholder="Address" required="true">
 		</div>	
 		<!-- owner/finders phone number -->
-		<div class="input-group input-group-lg mb-3">
+		<div class="input-group input-group-lg mt-3">
 			<div class="input-group-prepend">
 				<div class = "input-group-text question">Phone:</div>
 			</div>
 			<input type="tel" name="phone" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}" class = "form-control" placeholder="123-456-7890" required="true">
 		</div>	
 		<!-- area animal was last seen -->
-		<div class="input-group input-group-lg mb-3">
+		<div class="input-group input-group-lg mt-3">
 			<div class="input-group-prepend">
 				<div class = "input-group-text question">Area Animal was last seen:</div>
 			</div>
 			<input type="text" name="area" class = "form-control" placeholder="Location" required="true">
 		</div>
 		<!-- dispatcher / aco -->
-		<div class="input-group input-group-lg mb-3">
+		<div class="input-group input-group-lg mt-3">
 			<div class="input-group-prepend">
 				<div class="input-group-text question" >Dispatcher / Aco:</div>
 			</div>
 			<input type="text" name="dispatcher" class = "form-control" required="true">
 		</div>
 		<!-- Animal returned (Y/N) and date -->
-		<div class="input-group input-group-lg mb-3">
+		<div class="input-group input-group-lg mt-3">
 			<div class="input-group-prepend">
 				<div class="input-group-text question">Animal Returned to Owner:</div>
 				<div class="input-group-text">
@@ -891,7 +890,7 @@
 			<input type="date" name="date" class = "form-control" required="true">
 		</div>
 		<!-- Other Info -->
-		<div class="input-group input-group-lg mb-3">
+		<div class="input-group input-group-lg mt-3">
 			<div class="input-group-prepend">
 				<div class="input-group-text question" >Other Info:</div>
 			</div>
@@ -899,13 +898,13 @@
 		</div>
 
 		<!-- the alimighty submit button -->
-		<input class = "btn btn-success btn-lg w-100" type = "submit" required="true"> 
+		<input class = "btn btn-success btn-lg w-100 mt-3" type = "submit" required="true"> 
 
 	</form>
 
 
 
-
+	<div id = "summary"></div>
 
 	<div id = "result" class = "mt-5 mb-5"></div>
 
@@ -914,6 +913,7 @@
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
+<script type="text/javascript" src = "https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
 <script type="text/javascript" src = "main.js"></script>
 
 

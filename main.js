@@ -7,7 +7,7 @@ function display() {
 }
 
 $("form").submit(function(e) {
-    e.preventDefault();
+	e.preventDefault();
 });
 
 /* "other" text option on radio buttons disabled and enabled with "other" radio button selected */
@@ -106,3 +106,6 @@ $('#other_select').on("click", function(){
 
 //verification
 
+var dog_form = $('#dog_form')
+
+dog_form.validate()

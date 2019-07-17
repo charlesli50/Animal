@@ -80,3 +80,29 @@ $('#finder').click(function(){
 		$("#other_by_text").prop("required", false)
 	}
 })
+
+
+//switching between forms
+
+
+$('#dog_select').on("click", function(){
+	$('#cat_select, #other_select').removeClass("selected")
+	$('#dog_select').addClass("selected")
+	$('#cat_form, #other_form').hide()
+	$('#dog_form').show()
+})
+$('#cat_select').on("click", function(){
+	$('#dog_select, #other_select').removeClass("selected")
+	$('#cat_select').addClass("selected")
+	$('#dog_form, #other_form').hide()
+	$('#cat_form').show()
+})
+$('#other_select').on("click", function(){
+	$('#cat_select, #dog_select').removeClass("selected")
+	$('#other_select').addClass("selected")
+	$('#cat_form, #dog_form').hide()
+	$('#other_form').show()
+})
+
+//verification
+
